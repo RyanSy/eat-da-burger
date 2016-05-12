@@ -44,6 +44,10 @@
       {{#if this.devoured}}
         <li>
           {{this.burger_name}}
+          <form action="index/update/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="0">
+            <button type="submit">Spit It Out!</button>
+          </form>
         </li>
       {{/if}}
     {{/each}}
